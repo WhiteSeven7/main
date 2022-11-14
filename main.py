@@ -37,11 +37,11 @@ def write_data(data_: date):
         f.write(data_.strftime('%Y-%m-%d'))
 
 
-def create_window(title: str, w, h):
+def create_window(title: str, w, h, x=200, y=200):
     window_ = tk.Tk()
     window_.title(title)
     window_.resizable(False, False)
-    window_.geometry(f'{w}x{h}')
+    window_.geometry(f'{w}x{h}+{x}+{y}')
     return window_
 
 
